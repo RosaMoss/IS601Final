@@ -1,11 +1,27 @@
-
-import os
 from typing import List, Dict
 import simplejson as json
-from flask import Flask, request, Response, redirect
+from flask import Flask, request, Response, redirect, flash
 from flask import render_template
 from flaskext.mysql import MySQL
+from flask_login import LoginManager, login_user, login_required, logout_user
 from pymysql.cursors import DictCursor
+from flask_login import UserMixin
+from werkzeug.security import generate_password_hash, check_password_hash
+from models import MyUser
+
+app = Flask(__name__)
+mysql = MySQL(cursorclass=DictCursor)
+login_manager = LoginManager()
+login_manager.init_app(app)
+
+app.config['SECRET_KEY'] = 'GDtfDCFYjD'
+app.config['MYSQL_DATABASE_USER'] = 'root'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'root'
+app.config['MYSQL_DATABASE_HOST'] = 'db'
+app.config['MYSQL_DATABASE_PORT'] = 3306
+app.config['MYSQL_DATABASE_DB'] = 'addresses'
+mysql.init_app(app)
+
 
 app = Flask(__name__)
 mysql = MySQL(cursorclass=DictCursor)
