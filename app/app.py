@@ -142,7 +142,7 @@ def api_edit(city_id) -> str:
 
 
 
-@app.route('/api/v1/cities', methods=['POST'])
+@app.route('/api/v1/cities', methods=['POST']
 def api_add() -> str:
 
     content = request.json
