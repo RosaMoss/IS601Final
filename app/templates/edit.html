@@ -1,23 +1,49 @@
 {% extends "layout.html" %}
 {% block content %}
-<form action="/edit/{{patient.id}}" method="post">
-
+<form action="/edit/{{city.Address_id}}" method="post">
     <div class="row">
         <div class="col">
-            <label for="fldIndex">Patient Number</label>
-            <input id="fldIndex" type="number" class="form-control" name="fldIndex" value="{{patient.fldIndex}}">
+            <label for="fldName">First Name</label>
+            <input id="fldName" type="text" class="form-control" placeholder="First Name" name="fldName"
+                   value="{{city.First_Name}}">
         </div>
         <div class="col">
-            <label for="fldHeight_Inches">Height(in)</label>
-            <input id="fldHeight_Inches" type="number" class="form-control" name="fldHeight_Inches" value="{{patient.fldHeight_Inches}}">
+            <label for="fldAbbreviation">Last Name</label>
+            <input id="fldAbbreviation" type="text" class="form-control" placeholder="Last Name"
+                   name="fldAbbreviation" value="{{city.Last_Name}}">
         </div>
         <div class="col">
-            <label for="fldWeight_Pounds">Weight(lbs)</label>
-            <input id="fldWeight_Pounds" type="number" class="form-control" name="fldWeight_Pounds" value="{{patient.fldWeight_Pounds}}">
+            <label for="fldCountry">Street</label>
+            <input id="fldCountry" type="text" class="form-control" placeholder="Street" name="fldCountry"
+                   value="{{city.Street}}">
         </div>
     </div>
 
+    <div class="row">
+        <div class="col">
+            <label for="fldLat">City</label>
+            <input id="fldLat" type="text" class="form-control" placeholder="City" name="fldLat"
+                   value="{{city.City}}">
+        </div>
+        <div class="col">
+            <label for="fldlong">State</label>
+            <input id="fldlong" type="text" class="form-control" placeholder="State" name="fldLong"
+                   value="{{city.State}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="fldCapitalStatus">Postal Code</label>
+
+            <input id="fldCapitalStatus" type="text" class="form-control" placeholder="Postal Code"
+                   name="fldCapitalStatus" value="{{city.Postal_Code}}">
+        </div>
+{#        <div class="col">#}
+{#            <label for="fldPopulation"> Population</label>#}
+{#            <input id="fldPopulation" type="text" class="form-control" placeholder="Population" name="fldPopulation"#}
+{#                   value="{{city.fldPopulation}}">#}
+{#        </div>#}
+    </div>
     <button type="submit" class="btn btn-success">Save</button>
 
 </form>
-{% endblock %}
