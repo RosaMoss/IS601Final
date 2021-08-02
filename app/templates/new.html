@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/addresses/new" method="POST">
+    <div class="row">
+        <div class="col">
+            <label for="fldName">First Name</label>
+            <input id="fldName" type="text" class="form-control" placeholder="First Name" name="fldName">
+        </div>
+        <div class="col">
+            <label for="fldAbbreviation">Last Name</label>
+            <input id="fldAbbreviation" type="text" class="form-control" placeholder="Last Name"
+                   name="fldAbbreviation">
+        </div>
+        <div class="col">
+            <label for="fldCountry">Street</label>
+            <input id="fldCountry" type="text" class="form-control" placeholder="Street" name="fldCountry">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label for="fldLat">City</label>
+            <input id="fldLat" type="text" class="form-control" placeholder="City" name="fldLat">
+        </div>
+        <div class="col">
+            <label for="fldlong">State</label>
+            <input id="fldlong" type="text" class="form-control" placeholder="State" name="fldLong">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="fldCapitalStatus">Postal Code</label>
+
+            <input id="fldCapitalStatus" type="text" class="form-control" placeholder="Postal Code"
+                   name="fldCapitalStatus">
+        </div>
+        <div class="col">
+            <label for="fldPopulation">Address Id</label>
+            <input id="fldPopulation" type="text" class="form-control" placeholder="Address Id" name="fldPopulation">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Success</button>
+
+</form>
+
+{% endblock %}
