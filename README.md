@@ -11,4 +11,5 @@ By:Rosa Moss
 ![new user reg page](https://user-images.githubusercontent.com/85589945/128033806-56444c52-3704-4ab4-baab-4a702ba636e9.png)
 
 3. The follow up email 
-<img width="798" alt="email " src="https://user-images.githubusercontent.com/85589945/128034064-2d6ebd4a-ba50-416d-baca-6a6d8e4e0168.png">
+![The email notification](https://user-images.githubusercontent.com/85589945/128034576-a4447d44-792e-4d42-a2e9-f66838c20756.png)
+
