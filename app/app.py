@@ -5,9 +5,10 @@ from flask import render_template
 from flaskext.mysql import MySQL
 from flask_login import LoginManager, login_user, login_required, logout_user
 from pymysql.cursors import DictCursor
-from flask_login import UserMixin
-from werkzeug.security import generate_password_hash, check_password_hash
-from models import MyUser
+import smtplib, ssl
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+import hashlib
 
 app = Flask(__name__)
 mysql = MySQL(cursorclass=DictCursor)
